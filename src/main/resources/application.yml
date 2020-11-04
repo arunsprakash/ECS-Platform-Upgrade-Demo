@@ -25,6 +25,7 @@ spring:
     description: This is to demo the Graphql ECS 1.4 version upgrade issue
   main:
     show_banner: false
+    allow-bean-definition-overriding: true
     
 graphql:
   servlet:
@@ -45,3 +46,5 @@ graphiql:
   mapping: /graphiql
   endpoint: /graphql
   enabled: true
+
+  
