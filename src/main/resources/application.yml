@@ -22,7 +22,7 @@ management:
 spring:
   application:
     name: Demo Application
-    description: This is to demo the Graphql ECS 1.4 version upgrade issue with
+    description: This is to demo the Graphql ECS 1.4 version upgrade issue
   main:
     show_banner: false
     
