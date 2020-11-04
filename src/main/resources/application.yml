@@ -1,0 +1,47 @@
+server:  
+  port: 8000
+   
+management:
+  server:
+    port: 8001
+  security:
+    enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: info, health, env, threaddump, heapdump, metrics
+  endpoint:
+    health:
+      show-details: ALWAYS
+  health:
+    mail:
+      enabled: false
+    solr:
+      enabled: true
+
+spring:
+  application:
+    name: Demo Application
+    description: This is to demo the Graphql ECS 1.4 version upgrade issue with
+  main:
+    show_banner: false
+    
+graphql:
+  servlet:
+    mapping: /graphql
+    enabled: true
+    corsEnabled: true
+  spring-graphql-common:
+    clientMutationIdName: clientMutationId
+    injectClientMutationId: true
+    allowEmptyClientMutationId: false
+    mutationInputArgumentName: input
+    outputObjectNamePrefix: Payload
+    inputObjectNamePrefix: Input
+    schemaMutationObjectName: Mutation
+
+## GraphIQL Visibility Indicator
+graphiql:
+  mapping: /graphiql
+  endpoint: /graphql
+  enabled: true
