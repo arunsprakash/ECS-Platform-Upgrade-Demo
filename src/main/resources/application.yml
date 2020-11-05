@@ -17,7 +17,7 @@ management:
     mail:
       enabled: false
     solr:
-      enabled: true
+      enabled: false
 
 spring:
   application:
